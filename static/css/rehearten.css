@@ -1,0 +1,142 @@
+/* ReHearten Custom Styles */
+
+/* Sky Blue themed color palette */
+:root {
+    --rehearten-primary: #0ea5e9;     /* Sky blue chính */
+    --rehearten-secondary: #38bdf8;   /* Sky blue sáng */
+    --rehearten-accent: #7dd3fc;      /* Sky blue nhạt */
+    --rehearten-dark: #0369a1;        /* Xanh đậm */
+    --rehearten-light: #e0f2fe;       /* Xanh rất nhạt */
+}
+
+/* Custom pulse animations */
+.sky-pulse {
+    animation: skyPulse 2s ease-in-out infinite;
+}
+
+@keyframes skyPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+        color: var(--rehearten-primary);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Emotional gradient backgrounds - Sky theme */
+.bg-emotion-calm {
+    background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+}
+
+.bg-emotion-happy {
+    background: linear-gradient(135deg, #fef08a, #fde68a);
+}
+
+.bg-emotion-energetic {
+    background: linear-gradient(135deg, #7dd3fc, #38bdf8);
+}
+
+.bg-emotion-peaceful {
+    background: linear-gradient(135deg, #dbeafe, #bae6fd);
+}
+
+/* ReHearten specific button styles */
+.btn-rehearten {
+    background: linear-gradient(135deg, var(--rehearten-primary), var(--rehearten-secondary));
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+}
+
+.btn-rehearten:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+    color: white;
+}
+
+/* Emotional state indicators */
+.emotion-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.emotion-happy { background: #fef3c7; color: #d97706; }
+.emotion-sad { background: #dbeafe; color: #1d4ed8; }
+.emotion-angry { background: #fecaca; color: #dc2626; }
+.emotion-calm { background: #dbeafe; color: #0369a1; }
+.emotion-excited { background: #fce7f3; color: #be185d; }
+
+/* Chat bubble emotions */
+.chat-bubble-emotional {
+    position: relative;
+    overflow: hidden;
+}
+
+.chat-bubble-emotional::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent);
+    animation: emotionalSweep 3s infinite;
+}
+
+@keyframes emotionalSweep {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Additional Sky Blue Utilities */
+.bg-sky-gradient {
+    background: linear-gradient(135deg, var(--rehearten-primary), var(--rehearten-secondary));
+}
+
+.bg-sky-light {
+    background-color: var(--rehearten-light);
+}
+
+.text-sky-primary {
+    color: var(--rehearten-primary);
+}
+
+.text-sky-dark {
+    color: var(--rehearten-dark);
+}
+
+.border-sky {
+    border-color: var(--rehearten-primary);
+}
+
+.shadow-sky {
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+}
+
+/* Enhanced sky-themed cards */
+.card-sky {
+    background: var(--rehearten-light);
+    border: 1px solid var(--rehearten-accent);
+    border-radius: 16px;
+}
+
+/* Sky themed hover effects */
+.hover-sky:hover {
+    background: linear-gradient(135deg, var(--rehearten-accent), var(--rehearten-light));
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
